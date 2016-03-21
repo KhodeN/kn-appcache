@@ -2,11 +2,11 @@
 
 export class AppCache implements KN.IAppCache {
     private _appStarted: number; // in milliseconds
+    public static $inject = ['$rootScope', '$window', 'updateInterval'];
 
     constructor(private $rootScope: ng.IRootScopeService,
                 private $window: ng.IWindowService,
                 private updateInterval: number) {
-        'ngInject';
     }
 
     public init() {

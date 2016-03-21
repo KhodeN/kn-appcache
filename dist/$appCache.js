@@ -9,7 +9,6 @@
     "use strict";
     var AppCache = (function () {
         function AppCache($rootScope, $window, updateInterval) {
-            'ngInject';
             this.$rootScope = $rootScope;
             this.$window = $window;
             this.updateInterval = updateInterval;
@@ -44,6 +43,7 @@
                 _this.$window.applicationCache.update();
             }, this.updateInterval);
         };
+        AppCache.$inject = ['$rootScope', '$window', 'updateInterval'];
         return AppCache;
     }());
     exports.AppCache = AppCache;
