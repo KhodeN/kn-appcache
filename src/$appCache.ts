@@ -1,4 +1,4 @@
-/// <reference path="./kn-appcache.d.ts" />
+/// <reference path="../kn-appcache.d.ts" />
 
 export class AppCache implements KN.IAppCache {
     private _appStarted: number; // in milliseconds
